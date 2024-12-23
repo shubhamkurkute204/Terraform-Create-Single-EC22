@@ -1,3 +1,8 @@
+
+# Create EC2 with remote backend 
+
+# Prerequisite - Create Dynamo Db and S3 bucket 
+
 terraform {
   required_providers {
     aws = {
@@ -20,8 +25,4 @@ resource "aws_instance" "app_server" {
   tags = {
     Name = "Terraform_Demo"
   }
-}
-
-resource "aws_s3_bucket" "example" {
-  bucket = "Shubham-Terraform-S3-Demo-4421"
 }
